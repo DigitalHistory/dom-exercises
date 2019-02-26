@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>JS Review Practice Sheet</title>
+        <script
+	    src="https://code.jquery.com/jquery-3.3.1.min.js"
+	    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	    crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <h1>I am an H1 element</h1>
+        </header>
+        <main>
+            <article>
+                <h2>First H2 Element</h2>
+                <ul>
+                    <li>list item 1</li>
+                    <li>list item 2</li>
+                    <li>list item 3</li>
+                    <li>list item 4</li>
+                    <li>list item 5</li>
+                    <li>list item 6</li>
+                    <li>list item 7</li>
+                    <li>list item 8</li>
+                </ul>
+                <h2>Second H2 Element</h2>
+                
+
+            </article>
+            <article class="instructions">
+                <h1>Here are your instructions</h1>
+                <p>In this trivial repository you will find one other file, <a href="index.html">index.html</a>. Your task is to make a set of sequential changes to the page using either the native JavaScript DOM-related functions or jQuery (recommnded, and described below). </p>
+
+                <h2 id="tasks">Tasks</h2>
+
+                <ol>
+                    <li>Set the text-color of all h2 elements to <code>red</code> (or use <a href="https://www.rapidtables.com/web/css/css-color.html">a more exciting shade</a>)</li>
+
+                    <li>Set the background-color of all <code>ul</code> elements to "gold"</li>
+
+                    <li>Set the text content of the <code>h1</code> element to "DOM Practice for JavaScript"</li>
+
+                    <li>Set the text content of <strong>the second li only</strong> to <code>random noise</code></li>
+
+                    <li>Add a new <code>p</code> element to the end of <strong>the first article only</strong></li>
+
+                    <li>Set the HTML content of that new element to <code>I am a paragraph with &lt;em&gt;italics&lt;/em&gt; and &lt;strong&gt;bold&lt;/strong&gt;.</code></li>
+
+                    <li>Finally, remove these instructions from the DOM</li>
+                </ol>
+
+                <h2 id="somehints">Some Hints</h2>
+
+                <p>Once you start to understand jQuery, these operations are not so hard.  Remember:</p>
+
+                <ul>
+                    <li>select elements by calling jQuery wiht a CSS-selector-like string. For instance, <code>$('div&gt;p.main')</code> will find all <code>p</code> elements that are direct children of a <code>div</code> element and havea  class of <code>main</code>.</li>
+
+                    <li>it is also possible to call jQuery using <strong>an HTML element objet rather than a string</strong>.  We'll do this below.</li>
+
+                    <li>invoking that function (<code>$('div&gt;p.main')</code>) creates a <strong>jQuery object</strong> which has many powerful <strong>methods</strong> which you can now call by appending <code>.methodName</code> to the object. We mostly use the following methods in our homework: 
+
+
+                        <ul>
+                            <li><code>$().css(property, value)</code> will set the given CSS property value for all matching elements</li>
+
+                            <li><code>$().text(newValue)</code> will replace the existing text content of the element with <code>newValue</code></li>
+
+                            <li><code>$().html(newHTML)</code> is very similar, but will parse the text string and create any new HTML nodes as required</li>
+
+                            <li>it is possible to <strong>iterate over the elements returned in a jQuery objet</strong> using <strong>either</strong> array-like notation such as e.g. <code>$()[3]</code> to retrieve the <strong>fourth</strong> matching element in the DOM, <strong>or</strong> the array-like <code>each()</code> method which will perform an action for <strong>each</strong> matching element, e.g. (<code>$().each(function () {this.method(something)})</code>).  The latter method is cool but involves a callback function</li>
+
+                            <li>when retrieving and acting on <strong>individual nodes from the jQuery object</strong> one really tricky aspect is that <strong>the nodes themselves are not jQuery objects but native HTML objects</strong>. They have  methods, but they are <strong>not jQuery methods</strong>. If you want to use jQuery methods on them, you will have to wrap the result in another call to jQuery. So for instance, if you want to set a CSS value for the 5th matching element on a query you will do something like this (read carefully!): <code>$($('p')[4]).css('font-family', 'Dingbats')</code>.</li></ul>
+                    </li>
+                </ul>
+
+                <p><span id="flymd-marker"></span></p>
+                <p>Make hte following hcnages to this page, using simple jQuery commands: </p>
+                
+            </article>
+        </main>
+        <footer>Footer Text Goes Here</footer>
+
+        <script>
+        </script>
+    </body>
+</html>
