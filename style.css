@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+
+
+
+main#page-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 80vh;
+    flex-grow: 5;
+}
+
+main > card.card {
+    flex-basis: 300px;
+    /* padding: 10px; */
+    margin: 5px;
+    border: 2px solid gray;
+    padding: 0;
+}
+
+card.card>main {
+    padidng:2rem;
+}
+
+h1, footer {
+    text-align: center;
+}
+
+
+header {
+    background-color: var(--color-primary);
+}
+
+footer {
+    background-color: var(--color-lightGrey);
+    flex-grow: 3;
+}
+
+:root {
+    --color-primary: #1a9f60;
+    --color-lightGrey: #d2d6dd;
+    --color-grey: #7e818b;
+    --color-darkGrey: #3f4144;
+    --color-error: #d43939;
+    --color-success: #28bd14;
+    --grid-maxWidth: 120rem;
+    --grid-gutter: 2rem;
+    --font-size: 1.6rem;
+    --font-family: -apple-system, BlinkMacSystemFont, Avenir, "Avenir Next",
+                   "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+                   "Droid Sans", "Helvetica Neue", sans-serif;
+}
