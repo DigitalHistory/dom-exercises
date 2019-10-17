@@ -35,7 +35,7 @@ main#page-main {
     flex-grow: 5;
 }
 
-main > card.card {
+main  card.card {
     flex-basis: 300px;
     /* padding: 10px; */
     margin: 5px;
@@ -44,7 +44,7 @@ main > card.card {
 }
 
 card.card>main {
-    padidng:2rem;
+    padding:2rem;
 }
 
 h1, footer {
