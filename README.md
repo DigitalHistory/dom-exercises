@@ -1,6 +1,6 @@
 # DOM Pratice
 
-In this trivial repository you will find another file, [index.html](index.html). Your task is to make a set of sequential changes to the page using either the native JavaScript DOM-related functions or jQuery (recommnded, and described below). 
+In this trivial repository you will find another file, [index.html](index.html). Your task is to make a set of sequential changes to the page using either the native JavaScript DOM-related functions or jQuery (recommnded, and described below). There are some other files, too: `index.js` (explained in a second), `style.css` (style info for the file, a bit more i nthere than is really needed), and `atomic-function-practice.html` (see the bottom of this file for more info).
 
 ## Procedure 
 index.html contains the following tags in `<head>`: 
@@ -23,6 +23,7 @@ function runOnLoad () {
 document.addEventListener('DOMContentLoaded', runOnLoad, false);
 
 ```
+
 You can **experiment** by running individual commands in the browser window, and then add the command to the function in your version of `index.js`. 
 
 ## Tasks 
@@ -70,3 +71,34 @@ Once you start to understand jQuery, these operations are not so hard.  Remember
 
 For more extensive comparisons, see [you might not need jQuery](http://youmightnotneedjquery.com/), [Cheat Sheet for moving](https://tobiasahlin.com/blog/move-from-jquery-to-vanilla-javascript/), and perhaps easiest to read, [this Github Gist](https://gist.github.com/joyrexus/7307312).
 
+# Bonus!
+
+OK, let's talk about [atomic-function-practice.html](./atomic-function-practice.html). In this file you Have a chance to practice **slowly building up HTML using very simple functions**. As an example we use a simplified verison of the cards that were generated in Assignment zero.
+
+The goal is to build a card like this for each student (but we won't add the linebreaks and indents!): 
+
+``` html
+<card class="card">
+    <header>
+        <h1>matt
+        </h1>
+    </header>
+    <main>
+        <p>some guy
+        </p>
+    </main>
+    <footer>
+        <a href="https://digitalhistory.github.io/dh-website/">A Project of HIS393
+        </a>
+    </footer>
+</card>
+```
+
+So let's think about this:
+
+- for each card, we need to produce an HTML tag (`card`) with attributes and content
+- the content is **a group of other tags**, themselves **also containing tags**.
+- so there is an underlying task -- create tags -- which we can use repeatedly to generate the parts, and then assemble the whole card
+- once we know how to do that, we can iterate across the array of all cards (it's called `allEntries` and defined in a script tag at the top of the file) and create all the cards, then append them to the right element in the html structure
+- the starter code i n the file is a starting point; some sections are commented out to avoid syntax errors as you start out.
+- Try it out!!
