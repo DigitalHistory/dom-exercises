@@ -1,4 +1,4 @@
-# DOM Pratice
+# DOM Practice
 
 In this trivial repository you will find another file, [index.html](index.html). Your task is to make a set of sequential changes to the page using either the native JavaScript DOM-related functions or jQuery (recommnded, and described below). There are some other files, too: `index.js` (explained in a second), `style.css` (style info for the file, a bit more i nthere than is really needed), and `atomic-function-practice.html` (see the bottom of this file for more info).
 
