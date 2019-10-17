@@ -23,12 +23,8 @@
         <footer id="page-footer">That's the end of the page</footer>
 
         <script>
-         function letsTag ( content, tagName, attrs={}) {
-             output = `<${tagName} `;
-             Object.keys(attrs).map( (k, i) => output += `${k}="${attrs[k]}" `);
-             output += `>${content}</${tagName}>`;
-             return output;
-         }
+         // purposely hard to read!  -- please ignore it
+         function letsTag(a,c,b={}){output=`<${c} `;Object.keys(b).map((k,i)=>output+=`${k}="${b[k]}" `);output+=`>${a}</${c}>`;return output}
          
          function headMe (titleText) {
              let output ;
