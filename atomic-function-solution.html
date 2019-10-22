@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>JS Review Practice Sheet</title>
+        <script
+	    src="https://code.jquery.com/jquery-3.3.1.min.js"
+	    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	    crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chota@0.5.2/dist/chota.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script>
+         let allEntries = [{name: 'matt', blurb: 'some guy'},{name: "Hossein", blurb:"alas too rushed to write anything interesting."},  {name: "Rakan", blurb:"alas too rushed to write anything interesting."},  {name: "Matthew", blurb:"alas too rushed to write anything interesting."},  {name: "Mayte", blurb:"alas too rushed to write anything interesting."},  {name: "Joanna", blurb:"alas too rushed to write anything interesting."},  {name: "Chloe", blurb:"alas too rushed to write anything interesting."},  {name: "Alicia", blurb:"alas too rushed to write anything interesting."},  {name: "Kumail", blurb:"alas too rushed to write anything interesting."},  {name: "Margot", blurb:"alas too rushed to write anything interesting."},  {name: "Oliver", blurb:"alas too rushed to write anything interesting."},  {name: "Quinoah", blurb:"alas too rushed to write anything interesting."},  {name: "Saaged", blurb:"alas too rushed to write anything interesting."},  {name: "Oriane", blurb:"alas too rushed to write anything interesting."},  {name: "Ezra", blurb:"alas too rushed to write anything interesting."},  {name: "Zor", blurb:"alas too rushed to write anything interesting."},  {name: "Aidan", blurb:"alas too rushed to write anything interesting."},  {name: "Lucy", blurb:"alas too rushed to write anything interesting."},  {name: "William", blurb:"alas too rushed to write anything interesting."},  {name: "Erin", blurb:"alas too rushed to write anything interesting."},  {name: "Xi", blurb:"alas too rushed to write anything interesting."},  {name: "Keating", blurb:"alas too rushed to write anything interesting."},  {name: "Zee", blurb:"alas too rushed to write anything interesting."},  {name: "Raja", blurb:"alas too rushed to write anything interesting."},  {name: "", blurb:"alas too rushed to write anything interesting."},  {name: "Xinyi", blurb:"alas too rushed to write anything interesting."},  {name: "Marisa", blurb:"alas too rushed to write anything interesting."},  {name: "Hunter", blurb:"alas too rushed to write anything interesting."},  {name: "Narmitha", blurb:"alas too rushed to write anything interesting."},  {name: "Ed", blurb:"alas too rushed to write anything interesting."},  {name: "Michael", blurb:"alas too rushed to write anything interesting."},  {name: "Mustafa", blurb:"alas too rushed to write anything interesting."},  {name: "minkyungshin", blurb:"alas too rushed to write anything interesting."},  {name: "Paola", blurb:"alas too rushed to write anything interesting."},  {name: "Salina", blurb:"alas too rushed to write anything interesting."},  {name: "Rohail", blurb:"alas too rushed to write anything interesting."},  {name: "Harry", blurb:"alas too rushed to write anything interesting."},  {name: "Junior (Jr)", blurb:"alas too rushed to write anything interesting."},  {name: "Ingrid", blurb:"alas too rushed to write anything interesting."},  {name: "Akeil", blurb:"alas too rushed to write anything interesting."} ]
+         let sample = {name: 'matt', blurb: 'some guy'};
+        </script>
+    </head>
+    <body>
+        <header id="page-header">
+            <h1>Card Deck</h1>
+        </header>
+        <main id="page-main">
+        </main>
+        <footer id="page-footer">That's the end of the page</footer>
+
+        <script>
+         function letsTag ( content, tagName, attrs={}) {
+             output = `<${tagName} `;
+             for (a in attrs) {
+                 output+=`${a}=${attrs[a]} `;
+             }
+             output += `>${content}</${tagName}>`;
+             return output;
+         }
+         function headMe (titleText) {
+             output=letsTag(titleText, 'h1');
+             output=letsTag(output, 'header');
+             return(output);
+         }
+         function footMe () {
+             let link = letsTag('A Project of HIS393', 'a', {href: 'https://digitalhistory.github.io/dh-website/'});
+             return letsTag(link, 'footer');
+         }
+
+         function mainMe (blurb) {
+             let p = letsTag(blurb, 'p');
+             return letsTag(p, 'main');
+         }
+
+         function cardMe (person) {
+             let header = headMe(person.name);
+             let main = mainMe(person.blurb);
+             let footer = footMe();
+             return letsTag(header + main + footer, 'card', {class: 'card'});
+         }
+
+         function makeAllTheCards (people) {
+             output = '';
+             for (p of people) {
+                 output += cardMe (p);
+             }
+             
+             return $('main#page-main').append(output); 
+         }
+
+         makeAllTheCards(allEntries);
+        </script>
+    </body>
+</html>
