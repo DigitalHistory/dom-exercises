@@ -78,7 +78,7 @@ OK, let's talk about [atomic-function-practice.html](./atomic-function-practice.
 The goal is to build a card like this for each student (but we won't add the linebreaks and indents!): 
 
 ``` html
-<card class="card">
+ <card class="card">
     <header>
         <h1>matt
         </h1>
