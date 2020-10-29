@@ -1,0 +1,29 @@
+#board {
+    display:flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 80vh;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: auto;
+}
+
+.row div {
+    border: 2px #333333 solid;
+    padding: 1em;
+    width: auto;
+    font-size: 1.5em;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.row:nth-child(2n) div:nth-child(2n), .row:nth-child(2n-1) div:nth-child(2n-1) {
+    background-color: rgba(100,100,100,0.6);
+}
