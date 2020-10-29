@@ -1,6 +1,6 @@
 # DOM Practice
 
-In this trivial repository you will find another file, [index.html](index.html). Your task is to make a set of sequential changes to the page using either the native JavaScript DOM-related functions or jQuery (recommnded, and described below). There are some other files, too: `index.js` (explained in a second), `style.css` (style info for the file, a bit more i nthere than is really needed), and `atomic-function-practice.html` (see the bottom of this file for more info).
+In this trivial repository you will find another file, [index.html](index.html). Your task is to make a set of sequential changes to the page using either the native JavaScript DOM-related functions or jQuery (recommnded, and described below). There are some other files, too: `index.js` (explained in a second), `style.css` (style info for the file, a bit more in there than is really needed), as well as `atomic-function-practice.html`, and `checked.[html|css|js]` (see the bottom of this file for more info).
 
 ## Procedure 
 index.html contains the following tags in `<head>`: 
@@ -71,9 +71,17 @@ Once you start to understand jQuery, these operations are not so hard.  Remember
 
 For more extensive comparisons, see [you might not need jQuery](http://youmightnotneedjquery.com/), [Cheat Sheet for moving](https://tobiasahlin.com/blog/move-from-jquery-to-vanilla-javascript/), and perhaps easiest to read, [this Github Gist](https://gist.github.com/joyrexus/7307312).
 
-# Bonus!
+# Bonus! Atomic Functions!
 
-OK, let's talk about [atomic-function-practice.html](./atomic-function-practice.html). In this file you Have a chance to practice **slowly building up HTML using very simple functions**. As an example we use a simplified verison of the cards that were generated in Assignment zero.
+There are a couple of other cool exercises here that may actually be a bit easier to work with. Let's discuss.
+
+## Checked!
+
+In this example we generate a checkerboard of arbitrary size (well, ok, it looks like garbage with more than 9 rows). The main point of this exercise is to focus on building up your code from very, very simple functions, so that you **reuse your work as much as possible**. This is not very history-like, but I hope it shows the principle of reuse in the simplest possible way. There's no work for you to do here, but look at the `checked.js` file and try to understand how the code works. 
+
+## Cards!
+
+Now let's talk about [atomic-function-practice.html](./atomic-function-practice.html). It's a bit closer to the work you'll be doing in the assignment, and you have a chance to practice **slowly building up HTML using very simple functions**. As an example we use a simplified verison of the cards that were generated in Assignment zero.
 
 The goal is to build a card like this for each student (but we won't add the linebreaks and indents!): 
 
