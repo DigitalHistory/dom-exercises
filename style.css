@@ -29,22 +29,25 @@ main#page-main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     flex-basis: 80vh;
     flex-grow: 5;
 }
 
-main  card.card {
+#page-main  card.card {
     flex-basis: 300px;
     /* padding: 10px; */
     margin: 5px;
     border: 2px solid gray;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 card.card>main {
     padding:2rem;
+    flex-grow: 4;
 }
 
 h1, footer {
@@ -58,7 +61,7 @@ header {
 
 footer {
     background-color: var(--color-lightGrey);
-    flex-grow: 3;
+    flex-grow: 0;
 }
 
 :root {
